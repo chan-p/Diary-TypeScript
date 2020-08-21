@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Diary } from './Diary'
 import './App.css';
 
-function App() {
+const initialState: Diary[] = [
+  {
+      id: 1,
+      date: '2020-8-22',
+      title: '調子がよかった'
+  }
+]
+
+const App: React.FC = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <div>
+          <input type="date"/>
+      </div>
+  )
 }
 
 export default App;
