@@ -124,12 +124,14 @@ html.modalset {
   }
   .samplemodal-box {
     width: 80%;
+    height: 80%;
     /* max-width: 900px; */
     display: inline-block;
     vertical-align: middle;
     position: relative;
   }
   .samplemodal-box .inner {
+    height: 80%;
     background: #fff;
     padding: 80px 20px;
     text-align: left;
