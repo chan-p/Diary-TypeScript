@@ -1,3 +1,8 @@
+body {
+    font-family:arial, sans-serif;
+    font-size: 16px;        /*文字サイズ*/
+}
+
 #clndr {
     /* width: 504px;*/
     margin: 0 auto;
@@ -6,7 +11,7 @@
   
 .clndr-controls {
     display: flex;
-    font-size: 28px;
+    font-size: 20px;
     height: 35px;
 }
   
@@ -55,8 +60,8 @@ td:last-child {
 }
 
 .day-contents {
-    font-size: 34px;
-    line-height: 76px;
+    font-size: 25px;
+    line-height: 60px;
     height: 72px;
 }
 
