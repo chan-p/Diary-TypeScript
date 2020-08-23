@@ -6,7 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>	
 	<script src="../library/clndr.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/diary.css">
 </head>
@@ -15,13 +16,35 @@
 		
 	</div>
 	<div id=space>
-		 
 	</div>
 	<div id=main>
 		<div id="clndr"></div>
+
+		<div id="sampleModal" class="samplemodal">
+			<div class="samplemodal-wrap">
+				<div class="samplemodal-bg"></div>
+				<div class="samplemodal-box">
+					<div class="inner">
+						内容はいります
+						<div class="samplemodal-close"><span>閉じる</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<script>
 		$('#clndr').clndr();
+
+		$(function() {
+			$('.samplemodal-open').click(function(){
+				$('#sampleModal').fadeIn();
+				$('html').addClass('modalset');
+ 			});
+ 			$('.samplemodal .samplemodal-bg,.samplemodal .samplemodal-close').click(function(){
+  				$('#sampleModal').fadeOut();
+  				$('html').removeClass('modalset');
+ 			});
+		});
 	</script>
 </body>
 </html>
