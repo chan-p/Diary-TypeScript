@@ -61,14 +61,14 @@ td:last-child {
 
 .day-contents {
     font-size: 25px;
-    line-height: 60px;
+    line-height: 40px;
     height: 72px;
 }
 
 .today .day-contents {
     color: #fff;
     background-color: #ff4500;
-    border-radius: 50%;
+    border-radius: 80%;
 }
 
 #hmenu {
