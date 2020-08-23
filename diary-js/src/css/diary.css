@@ -1,0 +1,62 @@
+#clndr {
+    width: 504px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .clndr-controls {
+    display: flex;
+    font-size: 28px;
+    height: 35px;
+  }
+  
+  .clndr-control-button {
+    width: 20%;
+  }
+  .clndr-previous-button,
+  .clndr-next-button {
+    width: 100%;
+    cursor: pointer;
+    display: block;
+    transition: all .8s ease;
+    background: #AACC05;
+    color: #fff;
+  }
+  .clndr-previous-button:hover,
+  .clndr-next-button:hover {
+    background: linear-gradient(90deg,#ff4500,#ccf502,transparent,transparent);
+    background-position: 20% 20%;
+    background-size: 200% 200%;
+    color: #000;
+  }
+  .month {
+    width: 60%;
+  }
+  
+  .clndr-table {
+    width: 100%;
+  }
+  table thead tr td {
+    line-height: 40px;
+    background-color: #AACC05;
+  }
+  
+  table tr .adjacent-month .day-contents {
+    display: none;
+  }
+  td:first-child {
+    color: red;
+  }
+  td:last-child {
+    color: blue;
+  }
+  .day-contents {
+    font-size: 34px;
+    line-height: 76px;
+    height: 72px;
+  }
+  .today .day-contents {
+    color: #fff;
+    background-color: #ff4500;
+    border-radius: 50%;
+  }
