@@ -25,7 +25,13 @@
 				<div class="samplemodal-bg"></div>
 				<div class="samplemodal-box">
 					<div class="inner">
-						内容はいります
+						<div id="date"></div><br>
+						調子：&nbsp;&nbsp;<select name=”month”>
+							<option value=”jan”>とても良い</option>
+							<option value=”feb”>良い</option>
+							<option value=”mar”>悪い</option>
+							<option value=”mar”>とても悪い</option>
+							</select><br>
 						<div class="samplemodal-close"><span>閉じる</span></div>
 					</div>
 				</div>
@@ -37,6 +43,9 @@
 
 		$(function() {
 			$('.samplemodal-open').click(function(){
+
+				document.getElementById('date').innerText = $(this).attr("class").split(" ")[0]+'月'+$(this).attr("class").split(" ")[1]+'日'
+
 				$('#sampleModal').fadeIn();
 				$('html').addClass('modalset');
  			});
