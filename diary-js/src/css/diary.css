@@ -134,6 +134,7 @@ html.modalset {
     height: 85%;
     background: #fff;
     text-align: left;
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.32);/*影*/
   }
   .samplemodal-box .inner > :first-child {
     margin-top: 0;
