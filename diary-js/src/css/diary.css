@@ -64,22 +64,24 @@ td:last-child {
 .day-contents {
     font-size: 25px;
     line-height: 40px;
-    height: 67px;
+    height: 64px;
+    margin-bottom: 3px;
 }
 
 .today .day-contents {
     color: #fff;
     background-color: #ff4500;
-    border-radius: 80%;
+    border-radius: 70%;
 }
 
 .bmenu {
     padding-top: 1%;
-    height: 70px;
+    height: 64px;
     background-color: #009900;
     /* padding: -1em 0em; */
     margin-bottom: 1em;
     /* box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); */
+    border-top: solid 3px #000	;
 }
 
 .clndr-next-button {
