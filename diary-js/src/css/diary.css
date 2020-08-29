@@ -74,6 +74,27 @@ td:last-child {
 #hmenu {
     height: 30px;
     background-color: #AACC05;
+    /* padding: -1em 0em; */
+    margin-bottom: 1em;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+}
+
+.clndr-next-button {
+  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  margin-bottom: 1em;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+}
+
+.clndr-previous-button {
+  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  margin-bottom: 1em;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+}
+
+.header-days {
+  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  margin-bottom: 1em;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
 }
 
 #space {
