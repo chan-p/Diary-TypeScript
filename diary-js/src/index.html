@@ -25,14 +25,23 @@
 				<div class="samplemodal-bg"></div>
 				<div class="samplemodal-box">
 					<div class="inner">
-						<div id="date"></div><br>
-						調子：&nbsp;&nbsp;<select name=”month”>
-							<option value=”jan”>とても良い</option>
-							<option value=”feb”>良い</option>
-							<option value=”mar”>悪い</option>
-							<option value=”mar”>とても悪い</option>
-							</select><br>
-						<div class="samplemodal-close"><span>閉じる</span></div>
+						<br>
+						<div class="inner_header" align="center">記録をつけよう！</div>
+						<div class="inner_body">
+							<div id="date"></div><br>
+							調子：&nbsp;&nbsp;<select name=”month”>
+								<option value=”jan”>-- 選択 --</option>
+								<option value=”jan”>とても良い</option>
+								<option value=”feb”>良い</option>
+								<option value=”mar”>悪い</option>
+								<option value=”mar”>とても悪い</option>
+								</select><br>
+							<br>
+							自由欄:<br>
+							<textarea id="kanso" name="text" cols="45" rows="4" maxlength="30"></textarea>
+							<br>
+							<div class="samplemodal-close" align="right"><span>閉じる</span></div>
+						</div>
 					</div>
 				</div>
 			</div>

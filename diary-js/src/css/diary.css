@@ -1,6 +1,6 @@
 body {
     font-family:arial, sans-serif;
-    font-size: 16px;        /*文字サイズ*/
+    font-size: 16px;       /*文字サイズ*/
 }
 
 #clndr {
@@ -133,9 +133,29 @@ html.modalset {
   .samplemodal-box .inner {
     height: 45%;
     background: #fff;
-    padding: 80px 20px;
     text-align: left;
   }
   .samplemodal-box .inner > :first-child {
     margin-top: 0;
+  }
+
+  .inner_header {
+    height: 30px;
+    background-color: #AACC05;
+    color:  #fff;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+  }
+
+  .inner_body {
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+
+    padding: 0.5em 1em;
+    margin: 2em 20px;
+    color: #00BCD4;
+    background: #FFFFFF;/*背景色*/
+    /* border-top: solid 6px #1dc1d6; */
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
   }
