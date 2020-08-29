@@ -74,6 +74,11 @@ td:last-child {
     border-radius: 70%;
 }
 
+.line {
+  height: 2px;
+  background-color: #009900;
+}
+
 .bmenu {
     padding-top: 1%;
     height: 55px;
@@ -81,7 +86,7 @@ td:last-child {
     /* padding: -1em 0em; */
     margin-bottom: 1em;
     /* box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); */
-    border-top: solid 3px #000	;
+    border-top: solid 5px  #EEEEEE;
 }
 
 .clndr-next-button {
