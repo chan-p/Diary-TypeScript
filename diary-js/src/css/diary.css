@@ -64,7 +64,7 @@ td:last-child {
 .day-contents {
     font-size: 25px;
     line-height: 40px;
-    height: 72px;
+    height: 65px;
 }
 
 .today .day-contents {
@@ -74,11 +74,11 @@ td:last-child {
 }
 
 .bmenu {
-    height: 50px;
+    height: 60px;
     background-color: #AACC05;
     /* padding: -1em 0em; */
     margin-bottom: 1em;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+    /* box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); */
 }
 
 .clndr-next-button {
