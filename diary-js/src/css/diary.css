@@ -12,6 +12,11 @@ body {
     width: 100%;
 }
 
+.login {
+    height: 100%;
+    background-color: #009900;
+}
+
 .main {
     height: 100%;
     /* max-width: 40%; */
@@ -54,6 +59,7 @@ body {
   
 .clndr-table {
     width: 100%;
+    
 }
 
 table thead tr td {

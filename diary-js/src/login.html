@@ -23,51 +23,17 @@
 		<div class="hmenu" align="center">
 			介護日記アプリ
 		</div>
-		<div id="clndr"></div>
-
-		<div id="sampleModal" class="samplemodal">
-			<div class="samplemodal-wrap">
-				<div class="samplemodal-bg"></div>
-				<div class="samplemodal-box">
-					<div class="inner">
-						<br>
-						<div class="inner_header" align="center">記録をつけよう！</div>
-						<div class="inner_body">
-							<div id="date"></div><br>
-							調子：&nbsp;&nbsp;<select name=”month”>
-								<option value=”jan” align="center">-- 選択 --</option>
-								<option value=”jan”>とても良い</option>
-								<option value=”feb”>良い</option>
-								<option value=”mar”>悪い</option>
-								<option value=”mar”>とても悪い</option>
-								</select><br>
-							<br>
-							食事：&nbsp;&nbsp;<select name=”month”>
-								<option value=”jan” align="center">-- 選択 --</option>
-								<option value=”jan”>よく食べた</option>
-								<option value=”feb”>少し食べた</option>
-								<option value=”mar”>少し食べなかった</option>
-								<option value=”mar”>全く食べなかった</option>
-								</select><br>
-							<br>
-							自由欄:<br>
-							<textarea id="kanso" name="text" cols="35" rows="6"></textarea>
-							<br>
-							<div class="samplemodal-close" align="right"><span>閉じる</span></div>
-						</div>
-					</div>
-				</div>
-			</div>
+		<div class="login">
 		</div>
 		<div class="line"></div>
 		<div class="bmenu" align="center">
-			<a href="./login.html"><img src="./image/user.png" width="20%" height="70%" hspace="5%" vspace="1%"></a>
-			<img src="./image/calendar.png" width="20%" height="70%" hspace="5%" vspace="1%">
+			<img src="./image/user.png" width="20%" height="70%" hspace="5%" vspace="1%">
+			<a href="./index.html"><img src="./image/calendar.png" width="20%" height="70%" hspace="5%" vspace="1%"></a>
 			<img src="./image/setting.png" width="20%" height="70%" hspace="5%" vspace="1%">
 		</div>
 	</div>
 	<script>
-		$('#clndr').clndr();
+		// $('#clndr').clndr();
 
 		$(function() {
 			$('.samplemodal-open').click(function(){
