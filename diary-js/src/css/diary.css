@@ -76,7 +76,7 @@ td:last-child {
 .day-contents {
     font-size: 25px;
     line-height: 40px;
-    height: 59px;
+    height: 53px;
     margin-bottom: 5px;
 }
 
@@ -96,9 +96,11 @@ td:last-child {
     height: 55px;
     background-color: #009900;
     /* padding: -1em 0em; */
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
     /* box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32); */
     border-top: solid 5px  #EEEEEE;
+    position: fixed;
+    bottom: 0px;
 }
 
 .hmenu {
