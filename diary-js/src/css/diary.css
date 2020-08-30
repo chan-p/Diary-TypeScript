@@ -10,6 +10,10 @@ body {
     height: 100%;
 }
 
+.main {
+  height: 100%;
+}
+
 #clndr {
     /* width: 504px;*/
     margin: 0 auto;
