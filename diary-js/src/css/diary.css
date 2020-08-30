@@ -193,7 +193,7 @@ html.modalset {
     position: relative;
   }
   .samplemodal-box .inner {
-    height: 95%;
+    height: 85%;
     background: #fff;
     text-align: left;
     box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.32);/*影*/
@@ -210,6 +210,8 @@ html.modalset {
   }
 
   .inner_body {
+    height: 75%;
+
     padding-top: 0px;
     padding-left: 20px;
     padding-right: 20px;
