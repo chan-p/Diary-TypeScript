@@ -50,9 +50,22 @@
 								<option value=”mar”>全く食べなかった</option>
 								</select><br>
 							<br>
+							体温：&nbsp;&nbsp;<select id="taion_select" name=”month”>
+								<option value=”jan” align="center">-- 選択 --</option>
+								</select><br>
+							<br>
+							トイレの頻度：&nbsp;&nbsp;<select id="taion_select" name=”month”>
+								<option value=”jan” align="center">-- 選択 --</option>
+								<option value=”jan”>1時間に1回</option>
+								<option value=”feb”>3時間に1回</option>
+								<option value=”mar”>5時間に1回</option>
+								<option value=”mar”>7時間に1回</option>
+								</select><br>
+							<br>
 							自由欄:<br>
 							<textarea id="kanso" name="text" cols="35" rows="6"></textarea>
 							<br>
+							<div id="regist" align="right"><span>登録</span></div>
 							<div class="samplemodal-close" align="right"><span>閉じる</span></div>
 						</div>
 					</div>
@@ -82,6 +95,38 @@
   				$('html').removeClass('modalset');
  			});
 		});
+
+		$('#taion_select').click(() => {
+			let taion = document.getElementById('taion_select')
+			let taion_val = 34.8
+			for (let step = 0; step < 30; step++){
+				taion_val = Math.round((taion_val+0.2)*10)/10
+				let val = document.createElement("option")
+				val.innerHTML = taion_val
+				val.setAttribute("value", taion_val)
+				taion.appendChild(val)
+			}
+		})
+
+		let post = () => {
+			console.log('test')
+			// let XHR = new XMLHttpRequest();
+			// XHR.open("GET", "https://hayashi-test-5nh12x4c.de.gateway.dev/pets", true);
+			// XHR.onreadystatechange = function(){
+			// 	if(XHR.readyState == 4 && XHR.status == 200){
+			// 		// POST送信した結果を表示する
+			// 		conosole.log(XHR.responseText)
+			// 	}
+			// }
+			fetch("https://asia-northeast1-idap-gcp-dev.cloudfunctions.net/hayashi-pet", {
+				method: 'GET',
+			}).then(resonse => resnponse.text())
+			.then(text => {
+				console.log(text)
+			})
+		}
+
+		$('#regist').click(post)
 	</script>
 </body>
 </html>
