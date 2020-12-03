@@ -34,36 +34,36 @@
 						<div class="inner_header" align="center">記録をつけよう！</div>
 						<div class="inner_body">
 							<div id="date"></div><br>
-							調子：&nbsp;&nbsp;<select name=”month”>
-								<option value=”jan” align="center">-- 選択 --</option>
-								<option value=”jan”>とても良い</option>
-								<option value=”feb”>良い</option>
-								<option value=”mar”>悪い</option>
-								<option value=”mar”>とても悪い</option>
+							調子：&nbsp;&nbsp;<select id='status'>
+								<option value='0' align="center">-- 選択 --</option>
+								<option value='1'>とても良い</option>
+								<option value='2'>良い</option>
+								<option value='3'>悪い</option>
+								<option value='4'>とても悪い</option>
 								</select><br>
 							<br>
-							食事：&nbsp;&nbsp;<select name=”month”>
-								<option value=”jan” align="center">-- 選択 --</option>
-								<option value=”jan”>よく食べた</option>
-								<option value=”feb”>少し食べた</option>
-								<option value=”mar”>少し食べなかった</option>
-								<option value=”mar”>全く食べなかった</option>
+							食事：&nbsp;&nbsp;<select id='shokuji'>
+								<option value='0' align="center">-- 選択 --</option>
+								<option value='1'>よく食べた</option>
+								<option value='2'>少し食べた</option>
+								<option value='3'>少し食べなかった</option>
+								<option value='4'>全く食べなかった</option>
 								</select><br>
 							<br>
-							体温：&nbsp;&nbsp;<select id="taion_select" name=”month”>
-								<option value=”jan” align="center">-- 選択 --</option>
+							体温：&nbsp;&nbsp;<select id='taion_select'>
+								<option value='' align="center">-- 選択 --</option>
 								</select><br>
 							<br>
-							トイレの頻度：&nbsp;&nbsp;<select id="taion_select" name=”month”>
-								<option value=”jan” align="center">-- 選択 --</option>
-								<option value=”jan”>1時間に1回</option>
-								<option value=”feb”>3時間に1回</option>
-								<option value=”mar”>5時間に1回</option>
-								<option value=”mar”>7時間に1回</option>
+							トイレの頻度：&nbsp;&nbsp;<select id='toilet'>
+								<option value='0' align="center">-- 選択 --</option>
+								<option value='1'>1時間に1回</option>
+								<option value='2'>3時間に1回</option>
+								<option value='3'>5時間に1回</option>
+								<option value='4'>7時間に1回</option>
 								</select><br>
 							<br>
 							自由欄:<br>
-							<textarea id="kanso" name="text" cols="35" rows="6"></textarea>
+							<textarea id="text" cols="35" rows="6"></textarea>
 							<br>
 							<div id="regist" align="right"><span>登録</span></div>
 							<div class="samplemodal-close" align="right"><span>閉じる</span></div>
@@ -108,25 +108,47 @@
 			}
 		})
 
-		let post = () => {
-			console.log('test')
-			// let XHR = new XMLHttpRequest();
-			// XHR.open("GET", "https://hayashi-test-5nh12x4c.de.gateway.dev/pets", true);
-			// XHR.onreadystatechange = function(){
-			// 	if(XHR.readyState == 4 && XHR.status == 200){
-			// 		// POST送信した結果を表示する
-			// 		conosole.log(XHR.responseText)
-			// 	}
-			// }
-			fetch("https://asia-northeast1-idap-gcp-dev.cloudfunctions.net/hayashi-pet", {
+		$('.day-contents').click((info) => {
+			date_info = info.currentTarget.className.split(' ')
+			date = date_info[0] + '月' + date_info[1] + '日'
+
+			fetch("https://asia-northeast1-idap-gcp-dev.cloudfunctions.net/hayashi-pet?date="+date, {
 				method: 'GET',
-			}).then(resonse => resnponse.text())
+				mode: 'cors'
+			}).then(response => response.text())
+			.then(text => {
+				day_info = JSON.parse(text)["response"][0]
+				status = document.getElementById('status')
+				console.log(day_info.taion_select)
+				$("#status").val(Number(day_info.status))
+				$("#shokuji").val(Number(day_info.shokuji))
+				console.log($("#taion_select").val().innerHTML)
+				$("#toilet").val(Number(day_info.toilet));
+			})
+		})
+
+		$('#regist').click(() => {
+			const data = {
+				date: document.getElementById("date").innerHTML,
+				status: $('#status').val(),
+				shokuji: $('#shokuji').val(),
+				taion: $('#taion_select').val(),
+				toilet: $('#toilet').val(),
+				text: $('#text').val()
+			}
+			console.log(data)
+			fetch("https://hayashi-test-5nh12x4c.de.gateway.dev/pets", {
+				method: 'POST',
+				mode: 'cors',
+				headers: {
+    				"Content-Type": "application/json"
+  				},
+				body: JSON.stringify(data)
+			}).then(response => response.text())
 			.then(text => {
 				console.log(text)
 			})
-		}
-
-		$('#regist').click(post)
+		})
 	</script>
 </body>
 </html>
