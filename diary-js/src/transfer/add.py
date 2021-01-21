@@ -6,7 +6,7 @@ if __name__=='__main__':
 
     credentials_json = './key.json'  # BigQuery設定時の鍵へのパス
     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credentials_json
-    project_id = "idap-gcp-dev"
+    project_id = "****"
 
     # クライアントの設定
     client = datastore.Client(project=project_id, namespace="Diary")
